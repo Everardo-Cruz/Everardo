@@ -3,80 +3,43 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  margin: 20%;
-  /* margin-top: 10%; */
-  background-color: black;
-  height: auto;
-  /*  min-height: 100vh;
-  background: #212534;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  box-sizing: border-box; */ }
-
-.margen {
-  border-radius: 23px;
-  gap: 2rem;
-  width: 50%;
-  height: 600px;
-  border: solid 5px greenyellow;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background: #191c29;
-  width: var(--card-width);
-  height: var(--card-height);
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  font-size: 1.5em;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: cursive; */ }
-
-.perfil {
-  gap: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width:50%; */
-  height: auto; }
-
-.foto {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.foto-c {
-  width: 100%;
+html {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  background: #223;
+  display: grid;
+  place-items: center; }
 
-img {
-  width: 70%;
-  height: auto;
-  border-radius: 100%; }
+.box {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 60vmin;
+  height: 50vmin;
+  background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 3s linear infinite; }
 
-.redes {
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn; } }
+  .box:hover {
+    animation-play-state: paused; }
 
-p {
-  color: chartreuse; }
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn; }
+
+/* .redes{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p{
+    color: chartreuse;
+} */
