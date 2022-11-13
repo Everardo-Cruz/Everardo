@@ -6,7 +6,7 @@
   
 html {
   height: 100%;
-  background: #223;
+  background: rgba(34, 34, 51, 0.989);
   display: grid;
   place-items: center;
 }
@@ -20,7 +20,7 @@ html {
       from var(--border-angle),
       #213,
       #112 50%,
-      #213
+      rgb(34, 17, 51)
     ),
     conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
   background-size: calc(100% - (var(--border-size) * 2))
